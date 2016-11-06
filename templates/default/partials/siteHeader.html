@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title }} | {{ siteTitle }}</title>
+  <meta name="description" content="{{ siteDescription }}">
+</head>
+<body>
+  <div class="siteContainer">
+    <header class="siteHeader">
+      {{#if home}}
+        <h1 class="siteTitle">{{ siteTitle }}</h1>
+      {{else}}
+        <span class="siteTitle">{{ siteTitle }}</span>
+      {{/if}}
+
+      {{> siteNav }}
+    </header><!-- .siteHeader -->

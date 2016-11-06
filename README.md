@@ -1,5 +1,19 @@
-# FP Static Site with CMS Server (beta)
-A static website generator with self-hosted CMS server. Built with JavaScript, this project enables cross-platform use and creates many possible implementation opportunites.
+# FP Static Site Generator with CMS Server (beta)
+A static website generator with self-hosted CMS server. Built with JavaScript, this project enables cross-platform use and creates many possible implementation opportunities.
+
+## <a name="project-specification"></a>Project Specification (updated 1.0.0-beta)
+* [Gulp](http://gulpjs.com/) build system
+* [Metalsmith](http://www.metalsmith.io/) static site generator
+* [Handlebars](http://handlebarsjs.com/) template engine
+* Custom Handlebar helpers (see [Templating > Helpers](#template-helpers))
+
+## Documentation
+| Section | Summary |
+| ------- | ------- | 
+| [How to use](https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server/blob/master/docs/how-to-use.md) | <ul><li>[Install](https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server/blob/master/docs/how-to-use.md#install) (added 1.0.0-beta)</li><li>[Development Build](https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server/blob/master/docs/how-to-use.md#development-build) (added 1.0.0-beta)</li><li>[Production Build](https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server/blob/master/docs/how-to-use.md#production-build) (in build)</li></ul> |
+| [Configuration](https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server/blob/master/docs/configuration.md) | <ul><li>[Configuration Properties](https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server/blob/master/docs/configuration.md#configuration-properties)</li></ul> |
+| [Templating](https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server/blob/master/docs/templating.md) | <ul><li>[Template Structure](https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server/blob/master/docs/templating.md#template-structure) (in build)</li><li>[Template Helpers](https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server/blob/master/docs/templating.md#template-helpers) (in build)</li></ul> |
+| [Content](https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server/blob/master/docs/content.md) | <ul><li>[Pages](https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server/blob/master/docs/templating.md#pages) (in build)</li><li>[Media](https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server/blob/master/docs/templating.md#media) (in build)</li></ul> |
 
 ## Development Roadmap
 | Milestone | Feature Summary | Description | Estimate Delivery Date |

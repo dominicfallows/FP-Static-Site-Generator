@@ -1,26 +1,33 @@
 {
-  "name": "fp-static-site-with-cms-server",
+  "name": "fp-static-site-generator-with-cms-server",
   "version": "1.0.0-beta",
-  "description": "A static website generator with CMS",
-  "main": "",
+  "description": "A static website generator with CMS server",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:dominicfallows/FP-Static-Site-with-CMS-Server.git"
+    "url": "git@github.com:dominicfallows/FP-Static-Site-Generator-with-CMS-Server.git"
   },
   "author": "Dominic Fallows <consultant@dominicfallows.uk> (http://dominicfallows.uk)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dominicfallows/FP-Static-Site-with-CMS-Server/issues"
+    "url": "https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server/issues"
   },
-  "homepage": "https://github.com/dominicfallows/FP-Static-Site-with-CMS-Server#readme",
+  "homepage": "https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server#readme",
   "dependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-connect": "^5.0.0",
     "handlebars": "^4.0.5",
     "metalsmith": "^2.3.0",
+    "metalsmith-debug": "^1.1.0",
     "metalsmith-layouts": "^1.6.5",
     "metalsmith-markdown": "^0.2.1",
-    "metalsmith-permalinks": "^0.5.0"
+    "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-register-helpers": "^0.2.0",
+    "require": "^2.4.20"
   }
 }

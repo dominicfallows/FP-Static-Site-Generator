@@ -1,72 +1,91 @@
 "use strict";
 
-// Config
-var siteConfig = require('./config/site.json');
+// Config variables you could change
 var devPort = 5000;
 var devUiPort = 5100;
 
+// YOU SHOULDN'T NEED TO CHANGE ANYTHING BELOW HERE AT PRESENT
+var siteConfig = require('./config/site.json');
+var publicPath = "public";
+
 // Vendor dependencies
 var gulp = require("gulp");
-var Metalsmith = require('metalsmith');
-var markdown = require('metalsmith-markdown');
-var layouts = require('metalsmith-layouts');
-var permalinks = require('metalsmith-permalinks');
-var debug = require('metalsmith-debug');
-var browserSync = require('browser-sync');
-var helpers = require('metalsmith-register-helpers');
+var merge = require('lodash.merge');
+
+// Merge our global and template package.json files
+var packages = merge(
+  require("./templates/" + siteConfig.template + "/package.json"),
+  require("./package.json")
+);
+var plugins = require('gulp-load-plugins')({
+  config: packages,
+  pattern: ['*'],
+  scope: ['dependencies', 'devDependencies', 'peerDependencies']
+});
+var argv = require('yargs').argv;
 
 // Lib dependencies
 var utils = require('./lib/_utils.js');
 var configUtils = require('./lib/configUtils.js');
+var templateUtils = require('./lib/templateUtils.js');
+
+// Template tasks and dependencies 
+var templateTasks = templateUtils.getTemplateTasks(gulp, plugins, publicPath, siteConfig.template);
 
 // Tasks
-gulp.task('build-site:dev', function() {
+// Check siteConfig is populated correctly
+configUtils.checkConfig(siteConfig);
+
+gulp.task('help', function() {  
   // Check siteConfig is populated correctly
   configUtils.checkConfig(siteConfig, true);
 
+  // Show all registerd gulp tasks in console
+  plugins.taskListing();
+});
+
+gulp.task('setup-template', function() {
+  var templateName = argv.template || siteConfig.template;
+  return templateUtils.installTemplatePackages(gulp, templateName);
+});
+
+gulp.task('build-site:dev', function() {
   // Development Site Url
   siteConfig.siteUrl = "http://localhost:" + devPort;
 
   // Generate the site
-  Metalsmith(__dirname)
+  plugins.metalsmith(__dirname)
     .metadata(siteConfig)
-    .source('./content/pages')
-    .destination('./public')
-    .clean(true)
-    .use(markdown())
-    .use(drafts()) // only files that are NOT drafts
-    .use(permalinks())
-    .use(helpers({
+    .source('./content/pages/')
+    .destination(publicPath)
+    .clean(false) // don't clean as this wipes files added from other tasks
+    .use(plugins.metalsmithDrafts()) // only files that are NOT drafts
+    .use(plugins.metalsmithPermalinks())
+    .use(plugins.metalsmithRegisterHelpers({
       directory: 'lib/handleBarsHelpers'
     }))
-    .use(layouts({
+    .use(plugins.metalsmithLayouts({
       engine: 'handlebars',
       directory: "templates/" + siteConfig.template,
       partials: "templates/" + siteConfig.template + "/partials"
     }))
-    .use(debug()) // displays debug info on the console
+    .use(plugins.metalsmithDebug()) // displays debug info on the console
     .build(function(err, files) {
       if (err) { throw err; }
     });
 });
 
 gulp.task("server:front", function() {
-
-  // Check siteConfig is populated correctly
-  configUtils.checkConfig(siteConfig);
-
-  browserSync({
+  plugins.browserSync({
     port: devPort,
     ui: {
       port: devUiPort
     },
-    server: "public",
+    server: publicPath,
     files: [
-      "public/**/*.html",
-      "public/assets/css/**/*.css",
-      "public/assets/img/**/*",
-      "public/assets/js/**/.js",
-      "public/uploads/**/*"
+      publicPath + "/**/*.html",
+      publicPath + "/**/*.css",
+      publicPath + "/**/*.js"
     ],
     open: false
   });
@@ -75,10 +94,16 @@ gulp.task("server:front", function() {
 
 gulp.task("watch", function() {
   gulp.watch(['./templates/**/*.html'], ['build-site:dev']);
-  gulp.watch(['./content/**/*.md'], ['build-site:dev']);
+  gulp.watch(['./content/**/*.html'], ['build-site:dev']);
 });
 
-gulp.task("default", ["build-site:dev", "server:front", "watch"], function() {
+gulp.task("default", function() {
+  plugins.runSequence(
+    templateTasks.devTasks,
+    "build-site:dev",
+    "server:front",
+    "watch"
+  );
 
   // Log file changes to console
   function logFileChange(event) {

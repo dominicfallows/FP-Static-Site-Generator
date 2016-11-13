@@ -1,0 +1,21 @@
+{
+  "name": "example-template-for-fp-static-site-generator-with-cms-server",
+  "description": "An example temaplte for the FP static website generator with CMS server",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dominicfallows/FP-Static-Site-Generator-with-CMS-Server.git"
+  },
+  "author": "Dominic Fallows <consultant@dominicfallows.uk> (http://dominicfallows.uk)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server/issues"
+  },
+  "homepage": "https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server#readme",
+  "dependencies": {
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2"
+  }
+}

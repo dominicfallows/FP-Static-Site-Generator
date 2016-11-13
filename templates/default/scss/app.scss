@@ -1,0 +1,13 @@
+// Global variables
+$siteMaxWidth: 1200px;
+$siteMinWidth: 320px;
+
+// Reset
+@import "normalize";
+
+// Import your scss modules
+@import "layout";
+@import "header";
+@import "nav";
+@import "main";
+@import "footer";

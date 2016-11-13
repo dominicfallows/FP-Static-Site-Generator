@@ -3,9 +3,6 @@
   "version": "1.0.0-beta",
   "description": "A static website generator with CMS server",
   "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:dominicfallows/FP-Static-Site-Generator-with-CMS-Server.git"
@@ -19,15 +16,20 @@
   "dependencies": {
     "browser-sync": "^2.17.5",
     "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
     "gulp-connect": "^5.0.0",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-run": "^1.7.1",
+    "gulp-task-listing": "^1.0.1",
     "handlebars": "^4.0.5",
+    "lodash.merge": "^4.6.0",
     "metalsmith": "^2.3.0",
     "metalsmith-debug": "^1.1.0",
+    "metalsmith-drafts": "0.0.1",
     "metalsmith-layouts": "^1.6.5",
-    "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.5.0",
     "metalsmith-register-helpers": "^0.2.0",
-    "require": "^2.4.20"
+    "require": "^2.4.20",
+    "run-sequence": "^1.2.2",
+    "yargs": "^6.3.0"
   }
 }

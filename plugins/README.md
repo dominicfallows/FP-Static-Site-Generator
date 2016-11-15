@@ -1,0 +1,2 @@
+#Plugins - FP Static Site Generator 
+Information about [offical plugins](https://github.com/dominicfallows/FP-Static-Site-Generator#plugins) can be found in the main README.md file or in the [Plugins](https://github.com/dominicfallows/FP-Static-Site-Generator/blob/master/docs/plugins.md) documentation.

@@ -1,18 +1,18 @@
 {
-  "name": "fp-static-site-generator-with-cms-server",
+  "name": "fp-static-site-generator",
   "version": "1.0.0-beta",
-  "description": "A static website generator with CMS server",
+  "description": "A static website generator, pluggable and standalone",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:dominicfallows/FP-Static-Site-Generator-with-CMS-Server.git"
+    "url": "git@github.com:dominicfallows/FP-Static-Site-Generator.git"
   },
   "author": "Dominic Fallows <consultant@dominicfallows.uk> (http://dominicfallows.uk)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server/issues"
+    "url": "https://github.com/dominicfallows/FP-Static-Site-Generator/issues"
   },
-  "homepage": "https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server#readme",
+  "homepage": "https://github.com/dominicfallows/FP-Static-Site-Generator#readme",
   "dependencies": {
     "browser-sync": "^2.17.5",
     "gulp": "^3.9.1",

@@ -8,9 +8,9 @@
   "author": "Dominic Fallows <consultant@dominicfallows.uk> (http://dominicfallows.uk)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server/issues"
+    "url": "https://github.com/dominicfallows/FP-Static-Site-Generator/issues"
   },
-  "homepage": "https://github.com/dominicfallows/FP-Static-Site-Generator-with-CMS-Server#readme",
+  "homepage": "https://github.com/dominicfallows/FP-Static-Site-Generator#readme",
   "dependencies": {
     "gulp-autoprefixer": "^3.1.1",
     "gulp-babel": "^6.1.2",

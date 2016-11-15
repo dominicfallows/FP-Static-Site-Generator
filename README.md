@@ -5,7 +5,7 @@ Use the [default templates](https://github.com/dominicfallows/FP-Static-Site-Gen
 
 This generator compiles your assets into a [static site build](https://github.com/dominicfallows/FP-Static-Site-Generator/blob/master/docs/how-to-use.md) that you can distribute and host how you like. 
 
-Static sites are simpler by nature, enabling performance and reliability without the need for an advanced server setup. Upload your static site to your chosen host, or scale your hosting using cloud providers and a distributed setup. Static sites can make automated distribution simple. The project aims to implement [distribution tools](https://github.com/dominicfallows/FP-Static-Site-Generator#future-pipeline) to make this even easier.
+Static sites are simpler by nature, enabling performance and reliability without the need for an advanced server setup. Upload your static site to your chosen host, or scale your hosting using cloud providers and a distributed setup. Static sites can make automated distribution simple. The project aims to implement [distribution tools](https://github.com/dominicfallows/FP-Static-Site-Generator#feature-pipeline) to make this even easier.
 
 ## <a name="project-specification"></a>Project Specification
 Updated 1.0.0-beta
@@ -46,14 +46,10 @@ Updated 2016-11-15
 | 1.0.0-RC | Preparation for launch of 1.0.0 | <ul><li>Naming, Branding and Creative Development Process</li><li>Development of product website for 1.0.0 (stable) (using 1.0.0 stable)</li><li>Domains and hosting setup</li></ul> | w/e 2016-12-24 |
 | 1.0.0 | Launch of 1.0.0 | <ul><li>Launch of product website for 1.0.0 stable</li><li>Launch of Github branch for 1.0.0 stable</li></ul> | w/e 2017-01-07 |
 
-## <a name="future-pipeline"></a>Development Roadmap - Future Pipeline
+## <a name="feature-pipeline"></a>Feature Pipeline
 
-Updated 2016-11-14
-
-| Milestone | Feature Summary | Description |
-| --------- | --------------- | ----------- |
-| TBD | Plugins | Enable the generator to be extended with [plugins](https://github.com/dominicfallows/FP-Static-Site-Generator/blob/master/docs/plugins.md) like the [FP CMS Server](https://github.com/dominicfallows/FP-CMS-Server) (in build) | TBD |
-| TBD | Cloud Deployment (static site files) | Enable deployment of production build of static site to cloud infrastructures: <ul><li>Using npm/gulp tasks</li><li>via the [FP CMS Server](https://github.com/dominicfallows/FP-CMS-Server)</li></ul> | TBD |
+* [Feature Requests](https://github.com/dominicfallows/FP-Static-Site-Generator/issues?q=is%3Aissue+is%3Aopen+label%3A%22feature+requested%22) - requests will be logged via Github
+* [Features in Pipeline](https://github.com/dominicfallows/FP-Static-Site-Generator/issues?q=is%3Aissue+is%3Aopen+label%3A%22feature+in+pipeline%22) - features accepted into the pipeline, documented via Github
 
 ## Licenses
 
